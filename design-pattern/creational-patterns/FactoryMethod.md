@@ -16,7 +16,7 @@
 
 ---
 
-![이미지](../../resource/FactoryMethod01.jpeg)
+![이미지](../../resource/creational-patterns/FactoryMethod01.jpeg)
 
 **Creator**
 객체를 생성할 팩토리 메소드(createProduct) 정의. 
@@ -37,7 +37,7 @@ Creator 클래스는 추상 클래스로 정의하여, 팩토리 메소드 내�
 ---
 ## 예제
 
-![이미지](../../resource/FactoryMethod02.jpeg)
+![이미지](../../resource/creational-patterns/FactoryMethod02.jpeg)
 
 ```java
 abstract class Dialog {
