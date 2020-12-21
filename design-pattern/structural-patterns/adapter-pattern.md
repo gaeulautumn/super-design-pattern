@@ -14,7 +14,7 @@
 
 ##### Class 버전
 
-##### <img src="/Users/sonminhye/Downloads/structure-class-adapter-2x-2.png" alt="structure-class-adapter-2x-2" style="zoom: 60%;" />
+##### ![ClassAdapter](../../resource/structural-patterns/ClassAdapter.png)
 
 - 양립불가능한 두가지의 클래스가 있다면, 해당 클래스를 두개 다 상속하여 구현 가능. (단, 다중상속 가능한 언어 사용해야 함)
 - Adapter클래스의 경우, Adaptee클래스를 상속하는 서브클래스를 사용하는 것은 불가능
@@ -22,7 +22,7 @@
 
 ##### Object 버전
 
-##### ![structure-object-adapter-2x](/Users/sonminhye/Downloads/structure-object-adapter-2x.png)
+![ObjectAdapter](../../resource/structural-patterns/ObjectAdapter.png)
 
 - Adapter클래스는 Adaptee클래스의 객체를 정의하고, 이를 통해 Adaptee의 객체를 사용하는 방식으로 구현
 - Adapter클래스의 경우, Adaptee 클래스 및 이를 상속하는 서브클래스를 모두 사용 가능(Adaptee객체를 통해 서브클래스의 메소드 사용 가능)
@@ -32,7 +32,7 @@
 
 ##### Object 버전
 
-![스크린샷 2020-12-21 오후 10.12.39](/Users/sonminhye/Desktop/스크린샷 2020-12-21 오후 10.12.39.png)
+![ObjectAdapter-Example](../../resource/structural-patterns/ObjectAdapter-Example.png)
 
 * Duck
 
@@ -117,11 +117,11 @@ public class Main {
 }
 ```
 
-<img src="/Users/sonminhye/Desktop/스크린샷 2020-12-21 오후 10.21.34.png" alt="스크린샷 2020-12-21 오후 10.21.34" style="zoom:50%;" />
+![Result](../../resource/structural-patterns/Result.png)
 
 ##### Class 버전
 
-##### <img src="/Users/sonminhye/Desktop/스크린샷 2020-12-21 오후 10.37.38.png" alt="스크린샷 2020-12-21 오후 10.37.38" style="zoom:50%;" />
+##### ![ClassAdapter-Example](../../resource/structural-patterns/ClassAdapter-Example.png)
 
 * TurkeyAdapter
 
@@ -164,13 +164,13 @@ public class TurkeyAdapter extends Turkey implements Duck{
 
   * (a) 추상연산을 이용
 
-  ![99170B465AC4B58201](/Users/sonminhye/Downloads/99170B465AC4B58201.png)
+  ![Pluggable(a)](../../resource/structural-patterns/Pluggable(a).png)
 
   
 
   * (b) 위임객체를 이용
 
-    ![9908E8435AC4B6F419](/Users/sonminhye/Downloads/9908E8435AC4B6F419.png)
+    ![Pluggable(b)](../../resource/structural-patterns/Pluggable(b).png)
 
   * (c) 매개변수화된 Adapter사용
 
@@ -193,7 +193,7 @@ public class TurkeyAdapter extends Turkey implements Duck{
 
 * InputStreamReader
 
-![adapter-pattern-4](/Users/sonminhye/Downloads/adapter-pattern-4.png)
+![AdapterPattern-InputStreamReader](../../resource/structural-patterns/AdapterPattern-InputStreamReader.png)
 
 ```java
 BufferedReader br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
