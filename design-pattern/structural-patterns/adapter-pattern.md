@@ -187,7 +187,6 @@ public class TurkeyAdapter extends Turkey implements Duck{
 * Target 인터페이스가 커지게 된다면, Adapter또한 필연적으로 커질 수 밖에 없음.
 * Java의 경우, 다중상속을 지원하지 않기 때문에 무조건 하나 이상은 Interface로 구현해야 함.
 
-* 클래스 Adapter의 경우, 상속을 사용하므로 유연하지 못함.
 
 #### Adapter 패턴 사용사례
 
