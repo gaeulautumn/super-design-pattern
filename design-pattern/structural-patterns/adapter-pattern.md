@@ -14,7 +14,7 @@
 
 ##### Class 버전
 
-##### ![ClassAdapter](../../resource/structural-patterns/ClassAdapter.png)
+##### <img src="../../resource/structural-patterns/ClassAdapter.png" alt="ClassAdapter" style="zoom:50%;" />
 
 - 양립불가능한 두가지의 클래스가 있다면, 해당 클래스를 두개 다 상속하여 구현 가능. (단, 다중상속 가능한 언어 사용해야 함)
 - Adapter클래스의 경우, Adaptee클래스를 상속하는 서브클래스를 사용하는 것은 불가능
@@ -22,7 +22,7 @@
 
 ##### Object 버전
 
-![ObjectAdapter](../../resource/structural-patterns/ObjectAdapter.png)
+<img src="../../resource/structural-patterns/ObjectAdapter.png" alt="ObjectAdapter" style="zoom:50%;" />
 
 - Adapter클래스는 Adaptee클래스의 객체를 정의하고, 이를 통해 Adaptee의 객체를 사용하는 방식으로 구현
 - Adapter클래스의 경우, Adaptee 클래스 및 이를 상속하는 서브클래스를 모두 사용 가능(Adaptee객체를 통해 서브클래스의 메소드 사용 가능)
