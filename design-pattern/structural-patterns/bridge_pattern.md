@@ -5,12 +5,11 @@
 
 ![image](https://user-images.githubusercontent.com/21086676/102777461-f5724800-43d3-11eb-90dd-1c72f9567d81.png)
 
-#### 왼쪽 그림
 - Window 라는 추상클래스가 있음
 - X운영체제에서 사용하기 위한 `XWindow` 구현
 - PM운영체제에서 사용하기 위한 `PMWindow`구현
 
-#### 오른쪽 그림
+#### 문제 발단 케이스
 - 또다른 성격의 Window `IconWindow` 구현하게 됨
 - 그런데 문제는 X운영체제에서 돌아가는 `IconWindow`와 PM운영체제에서 돌아가는 `IconWindow` 이 필요한 상황
 - `IconWindow`의 기능을 유지해야하니깐, `IconWindow`를 상속받아 `XIconWindow`, `PMIconWIndow` 각각 개발
