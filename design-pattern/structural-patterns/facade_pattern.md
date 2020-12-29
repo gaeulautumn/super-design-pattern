@@ -8,6 +8,7 @@
 
 
 ![이미지](../../resource/structural-patterns/facade02.png)
+  
 클라이언트에서 서브시스템들을 일일히 다룰 필요가 없고 facade 만 알고 있으면 된다.
 
 
