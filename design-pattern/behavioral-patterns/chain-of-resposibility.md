@@ -25,4 +25,58 @@
 - 요청이 처리된다는 보장이 없음
     - 실제 요청을 처리할 객체에서 메세지의 요청이 누락될 경우, 예상치 못한 이슈가 생길 수 있음.
 
+## 예제코드(짧게)
+```java
+abstract class Logger {
+    protected int mask;
+    protected Logger next;
+
+    public Logger setNext(Logger log) {
+        next = log;
+        return log;
+    }
+
+    public void message(String msg, int priority) {
+        if (priority <= mask) {
+            writeMessage(msg);
+        }
+        if (next != null) {
+            next.message(msg, priority);
+        }
+    }
+
+    abstract protected void writeMessage(String msg);
+}
+
+class StdoutLogger extends Logger {
+    public StdoutLogger(int mask) {
+        this.mask = mask;
+    }
+
+    protected void writeMessage(String msg) {
+        System.out.println("Writing to stdout: " + msg);
+    }
+}
+
+
+class EmailLogger extends Logger {
+    public EmailLogger(int mask) {
+        this.mask = mask;
+    }
+
+    protected void writeMessage(String msg) {
+        System.out.println("Sending via email: " + msg);
+    }
+}
+
+class StderrLogger extends Logger {
+    public StderrLogger(int mask) {
+        this.mask = mask;
+    }
+
+    protected void writeMessage(String msg) {
+        System.err.println("Sending to stderr: " + msg);
+    }
+}
+```
 
