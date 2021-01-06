@@ -7,7 +7,7 @@
 * 한 집합에 속한 객체들 간 의사소통을 중재자 클래스를 통해 하게 함으로써, 객체들이 서로를 참조하지 않도록 해 결합성을 줄이는 패턴
 * 객체 간 상호작용을 한 클래스에 몰아줌. (Mediator)
 
-<img src="/Users/sonminhye/Desktop/design-pattern/super-design-pattern/resource/behavioral-patterns/mediator.png" alt="Interpreter-pattern" style="zoom:50%;" />
+<img src="../../resource/behavioral-patterns/mediator.png" alt="Interpreter-pattern" style="zoom:50%;" />
 
 ##### 중재자패턴의 클래스다이어그램
 
