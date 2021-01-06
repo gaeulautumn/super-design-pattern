@@ -8,6 +8,7 @@
 
 
 ![이미지](../../resource/structural-patterns/facade02.png)
+  
 클라이언트에서 서브시스템들을 일일히 다룰 필요가 없고 facade 만 알고 있으면 된다.
 
 
@@ -16,6 +17,7 @@
 - 복잡성 감소
 - 최소 지식 원칙 (객체와 상호작용 하는 클래스를 최소화)
 - 계층 구조 (관심사를 분리하여 퍼사드를 여러개 만들 수 있음)
+![이미지](../../resource/structural-patterns/facade03.png)
 
 
 ## 왜 쓰나?

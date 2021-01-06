@@ -27,4 +27,59 @@
 
 - 위 그림처럼 Tree 구조로 구성되어 있음.
 
-to be coninue..
+## 코드예제
+
+```java
+
+interface Graphic {
+    public void print();
+}
+
+class CompositeGraphic implements Graphic {
+
+    private List<Graphic> mChildGraphics = new ArrayList<Graphic>();
+
+    public void print() {
+        for (Graphic graphic : mChildGraphics) {
+            graphic.print();
+        }
+    }
+
+    public void add(Graphic graphic) {
+        mChildGraphics.add(graphic);
+    }
+
+    public void remove(Graphic graphic) {
+        mChildGraphics.remove(graphic);
+    }
+}
+
+
+/** "Leaf" */
+class SingleGraphic implements Graphic {
+    public void print() {
+        System.out.println("leaf");
+    }
+}
+
+
+/** Client */
+public class Program {
+
+    public static void main(String[] args) {
+        SingleGraphic line = new SingleGraphic();
+        SingleGraphic text = new SingleGraphic();
+        SingleGraphic shape = new SingleGraphic();
+
+        CompositeGraphic groupGraphics = new CompositeGraphic();
+        CompositeGraphic compositeGroupGraphics = new CompositeGraphic();
+
+        groupGraphics.add(line);
+        groupGraphics.add(text);
+        groupGraphics.add(shape);
+
+        compositeGroupGraphics.add(groupGraphics);
+        compositeGroupGraphics.print();
+    }
+}
+```
