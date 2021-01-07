@@ -78,5 +78,24 @@ class StderrLogger extends Logger {
         System.err.println("Sending to stderr: " + msg);
     }
 }
+
+public class ChainOfResponsibilityExample {
+    public static void main(String[] args) {
+        Logger logger, logger1;
+        logger1 = logger = new StdoutLogger(Logger.DEBUG);
+        logger1 = logger1.setNext(new EmailLogger(Logger.NOTICE));
+        logger1 = logger1.setNext(new StderrLogger(Logger.ERR));
+       
+
+        // Handled by StdoutLogger
+        logger.message("Entering function y.", Logger.DEBUG);
+
+        // Handled by StdoutLogger and EmailLogger
+        logger.message("Step1 completed.", Logger.NOTICE);
+
+        // Handled by all three loggers
+        logger.message("An error has occurred.", Logger.ERR);
+    }
+}
 ```
 
