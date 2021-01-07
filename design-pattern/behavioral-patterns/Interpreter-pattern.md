@@ -148,4 +148,12 @@ public class Main {
 
 ------
 
-컴파일러
+JDK - java.util.regex.Pattern
+
+```java
+String pattern = "^[0-9]*$"; //숫자만
+String val = "123456789"; //대상문자열
+        
+boolean regex = Pattern.matches(pattern, val);
+```
+

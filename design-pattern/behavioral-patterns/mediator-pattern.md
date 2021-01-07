@@ -5,9 +5,17 @@
 ------
 
 * 한 집합에 속한 객체들 간 의사소통을 중재자 클래스를 통해 하게 함으로써, 객체들이 서로를 참조하지 않도록 해 결합성을 줄이는 패턴
-* 객체 간 상호작용을 한 클래스에 몰아줌. (Mediator)
+* 동료객체 간 상호작용을 한 클래스에 몰아줌. (Mediator)
 
-<img src="../../resource/behavioral-patterns/mediator.png" alt="Interpreter-pattern" style="zoom:50%;" />
+<img src="../../resource/behavioral-patterns/mediator.png" alt="Interpreter-pattern" style="zoom: 40%;" />
+
+
+
+<img src="../../resource/behavioral-patterns/mediator1.png" alt="Interpreter-pattern" style="zoom: 40%;" />
+
+##### 중재자 클래스 - 동료객체 간 처리 순서
+
+![mediator3](../../resource/behavioral-patterns/mediator3.gif)
 
 ##### 중재자패턴의 클래스다이어그램
 
@@ -114,6 +122,8 @@ public class Main {
 }
 ```
 
+<img src="../../resource/behavioral-patterns/mediator4.png" alt="mediator4" style="zoom:50%;" />
+
 #### Mediator 패턴의 장단점
 
 ------
@@ -140,7 +150,7 @@ public class Main {
 
 ------
 
-* 퍼사드 패턴
+- 퍼사드 패턴
   * 퍼사드의 경우, 객체들로 구성된 서브시스템들을 추상화해 복잡한 코드를 감춰 더 편한 인터페이스를 제공하려는 것으로, 중재자 패턴과 조금 다름.
   * 서브시스템 객체들로만 메세지 전달(퍼사드 객체로 메세지가 전달되지는 않음)
   * 중재자 패턴의 경우, 양방향 메세지 전달 가능.
@@ -149,4 +159,13 @@ public class Main {
 
 ------
 
-Java Message Server(JMS)
+Java Timer - scheduleXX() 함수
+
+```java
+TimerTask timerTask = new MyTimerTask();
+//running timer task as daemon thread
+Timer timer = new Timer(true);
+
+timer.scheduleAtFixedRate(timerTask, 0, 10*1000);
+```
+
