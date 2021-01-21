@@ -109,3 +109,20 @@ $game->play();
 $game = new Mario();
 $game->play();
 ```
+
+### 장점
+- 코드 중복을 크게 줄일 수 있다.
+- 자식 객체의 롤을 최대한 줄임으로써 핵심로직에 집중한다.
+- 쉽게 자식 객체를 추가, 확장해 나갈 수 있다.
+
+### 단점
+- abstract method가 너무 많으면 관리가 힘들다.
+- 반드시 추상 클래스의 템플릿 메서드에서 구현클래스의 메서드를 부르는 식으로 로직을 구성해야 한다. (상위 -> 하위)
+
+### Jdk 예제
+- java.util.AbstractList#indexOf()
+  - ArrayList의 추상 클래스인 AbstractList의 indexOf() 템플릿 메소드에서는 listIterator()메소드를 호출하는데, 이것은 구현 클래스인 ArrayList에 선언되어있다.
+
+- java.util.Collections#sort()
+
+
