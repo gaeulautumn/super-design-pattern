@@ -142,9 +142,8 @@ public class Main {
 ------
 
 * 이중 디스패치
-  * 런타임에 어떤 연산을 수행할지 결정하는데, 두 가지 이상의 타입에 따라 해당 연산이 결정.
+  * 런타임에 어떤 연산을 수행할지, 두 가지 이상의 타입에 따라 해당 연산이 결정.
   * 실제 실행되는 연산은, Visitor 타입과 그것이 방문하는 Element 타입에 따라 달라지게 됌.
-  * 연산과 Element는 정적 바인딩을 하지만, Visitor내 연산을 한 군데로 모으고 Accept를 이용해 런타임에 바인딩을 진행
 * 객체구조의 순회
   * 객체구조 / 반복자 / 방문자에 책임을 맡길 수 있음.
 
@@ -159,7 +158,7 @@ public class Main {
 class CompositeElement {
 	public void Accept(){
 		for(...){
-			원소.accept();
+			Element.accept();
 		}
 		v.visitCompositeElement();
 	}
